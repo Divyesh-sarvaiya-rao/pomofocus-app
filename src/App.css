@@ -1,0 +1,107 @@
+body{
+  background-color: rgb(186, 73, 73);
+  overflow-x: hidden;
+  font-family: 'ArialRounded', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+}
+.main{
+  margin-left: 25%;
+  margin-right: 25%;
+}
+/*Heder component css start here*/
+.header{
+  height: 70px;
+  padding: 10px 0px;
+  border-bottom: 1px solid black;
+}
+.header-text{
+    display: inline-block;
+    color: white;
+/*    margin: 0px;*/
+    padding: 10px 0px;
+    font-size: 20px;
+}
+.header-button{
+  float: right;
+  padding: 10px;
+  display: space-between;
+}
+.header-button button{
+    border-radius: 4px;
+    cursor: pointer;
+    opacity: 0.9;
+    background: none rgba(255, 255, 255, 0.2);
+    box-shadow: none;
+    margin-left:0px;
+    margin-right: 20px;
+    font-size: 13px;
+    padding: 5px 10px;
+    min-width: 70px;
+    border: none;
+    color: white !important;
+}
+/*Home component css start here*/
+.home_component{
+    margin-top: 40px;
+}
+.first_row{
+  margin-left: 10%;
+  margin-right: 10%;
+  height: 300px;
+  border-radius: 8px;
+  background-color: #ffffff24;
+}
+.second_row{
+  height: 30px;
+  margin-left: 10%;
+}
+.second_row button{
+  border: none;
+  background-color: transparent;
+  color: white;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight:700;
+  padding: 5px 5px;
+  margin-left: 2%;
+  position: relative;
+  margin-top: 20px;
+}
+.second_row #pomodoro{
+  background-color: #25181940;
+}
+/*Timer component css start here*/
+.stopwatch-time {
+    text-align: center;
+    color: #fff;
+    font-size: 100px;
+}
+.startBut{
+    cursor: pointer;
+    border: none;
+    margin: 20px 0px 0px;
+    padding: 0px 12px;
+    border-radius: 4px;
+    box-shadow: rgb(235, 235, 235) 0px 6px 0px;
+    font-size: 22px;
+    height: 55px;
+    color: rgb(186, 73, 73);
+    font-weight: bold;
+    width: 200px;
+    background-color: white;
+    transition: color 0.5s ease-in-out 0s;
+}
+/*Task component ends here*/
+.pomodoro_count{
+  color: whitesmoke;
+  font-size: 16px;
+  width: 20px;
+  cursor: pointer;
+  user-select: none;
+  margin: auto;
+  margin-top: 3%;
+}
+.taskName{
+  font-size: 20px;
+  color: white;
+  font-weight: 400;
+}

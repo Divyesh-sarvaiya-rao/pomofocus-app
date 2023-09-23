@@ -1,44 +1,35 @@
-import React from 'react';
+import { useState, useEffect } from 'react'
 import Timer from './Timer.js'
+import Task from './Task.js'
 
 function Home(props) {
-let time =props.time;
+let time=20;
+const [color, setColor] = useState("rgb(186, 73, 73)")
+const click = (color) => {
+	setColor(color)
+}
+useEffect(() => {
+document.body.style.backgroundColor = color;
+}, [color])
 
-const pomoDoro = () =>{
-	document.getElementById('root').style.backgroundColor='rgb(186, 73, 73)';
-	document.getElementById('shortBreack').style.backgroundColor='transparent'
-	document.getElementById('longBreack').style.backgroundColor='transparent'
-	document.getElementById('pomodoro').style.backgroundColor='#25181940'
-}
-const shortBreack = ()=> {
-	document.getElementById('root').style.backgroundColor='#38858A';
-	document.getElementById('shortBreack').style.backgroundColor='#25181940'
-	document.getElementById('pomodoro').style.backgroundColor='transparent'
-	document.getElementById('longBreack').style.backgroundColor='transparent'
-}
-const longBreack = () =>{
-	document.getElementById('root').style.backgroundColor='#397097';
-	document.getElementById('longBreack').style.backgroundColor='#25181940'
-	document.getElementById('pomodoro').style.backgroundColor='transparent'
-	document.getElementById('shortBreack').style.backgroundColor='transparent'
-}
 	return (
 		<>
 		<div className='home_component'>
-			<div className='row first_row'>
+			<div className='first_row'>
 				<div className='row second_row'>
 					<div className='col button_col'>
-						<button id='pomodoro' onClick={pomoDoro}>Pomodoro</button>
-						<button onClick={shortBreack} id='shortBreack'>Short Break</button>
-						<button onClick={longBreack} id='longBreack'>Long Break</button>
+						<button id='pomodoro' onClick = {() => click("rgb(186, 73, 73)")}>Pomodoro</button>
+						<button id='shortBreack' onClick = {() => click("rgb(56,133,138)")}>Short Break</button>
+						<button id='longBreack' onClick = {() => click("rgb(57,112,151)")}>Long Break</button>
 					</div>
-				</div>
 					<div className='timer_component'>
 						<Timer timeing={time}/>
 					</div>
+				</div>
+					<div className='pomodoro_count text-center'>#1</div>
+					<div className='taskName text-center'>Time to focus!</div>
+					<Task />
 			</div>
-			<div className='pomodoro_count text-center'>#1</div>
-			<div className='taskName text-center'>Time to focus!</div>
 		</div>
 		</>
 	);

@@ -3,7 +3,7 @@ import { useEffect, useRef, useState } from "react";
 
 function Timer(props) {
   let time =60*props.timeing
-  const [timer, setTimer] = useState(time); // 25 minutes
+  const [timer, setTimer] = useState(time);
   const [start, setStart] = useState(false);
   const firstStart = useRef(true);
   const tick = useRef();

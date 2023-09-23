@@ -11,7 +11,7 @@ body{
 .header{
   height: 70px;
   padding: 10px 0px;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid;
 }
 .header-text{
     display: inline-block;
@@ -34,6 +34,7 @@ body{
     margin-left:0px;
     margin-right: 20px;
     font-size: 13px;
+    font-weight: 500;
     padding: 5px 10px;
     min-width: 70px;
     border: none;
@@ -46,23 +47,23 @@ body{
 .first_row{
   margin-left: 10%;
   margin-right: 10%;
+}
+.second_row{
+  height: 30px;
   height: 300px;
   border-radius: 8px;
   background-color: #ffffff24;
 }
-.second_row{
-  height: 30px;
-  margin-left: 10%;
-}
-.second_row button{
+.second_row #pomodoro, #shortBreack, #longBreack{
   border: none;
+  display: inline;
   background-color: transparent;
   color: white;
   border-radius: 6px;
   font-size: 16px;
   font-weight:700;
   padding: 5px 5px;
-  margin-left: 2%;
+/*  margin-left: 2%;*/
   position: relative;
   margin-top: 20px;
 }
@@ -90,7 +91,6 @@ body{
     background-color: white;
     transition: color 0.5s ease-in-out 0s;
 }
-/*Task component ends here*/
 .pomodoro_count{
   color: whitesmoke;
   font-size: 16px;
@@ -104,4 +104,108 @@ body{
   font-size: 20px;
   color: white;
   font-weight: 400;
+}
+/*Task component ends here*/
+.task_header{
+  color: white;
+  width: 100%;
+  font-weight: 500;
+  font-size: 20px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid white;
+}
+.dots_menu{
+  float: right;
+  cursor: pointer;
+  user-select: none;
+}
+.task_button{
+   box-sizing: border-box;
+    width: 100%;
+    height: 64px;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    cursor: pointer;
+    opacity: 0.8;
+    color: white;
+    margin-top: 12px;
+    border: 2px dashed rgba(255, 255, 255, 0.4);
+}
+.task_add_box{
+  padding: 10px 20px 0px;
+  height: 300px;
+  background-color: white;
+  margin: 20px 0px 20px 0px;
+  border-radius: 10px;
+}
+.task_add_box input{
+    border-radius: 4px;
+    font-size: 22px;
+    padding: 10px 0px;
+    box-shadow: none;
+    border: none;
+    background-color: none;
+    width: 100%;
+    box-sizing: border-box;
+    font-weight: bold;
+}
+.task_add_box input:active{
+  border: none;
+}
+.task_add_box span{
+  color: rgb(85, 85, 85);
+  font-weight: bold;
+}
+.number_input{
+  order-radius: 4px;
+  background-color: rgb(239, 239, 239);
+  font-size: 16px;
+  padding: 10px;
+  box-shadow: none;
+  border: none;
+  color: rgb(85, 85, 85);
+  width: 20px;
+  box-sizing: border-box;
+  margin-right: 10px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+.btn_div{
+  float: right;
+  margin-top: 50px;
+}
+.cancel_btn{
+ text-align: center;
+    border-radius: 4px;
+    cursor: pointer;
+    opacity: 0.9;
+    font-size: 14px;
+    padding: 8px 12px;
+    min-width: 70px;
+    display: inline-block;
+    margin-right: 14px;
+    background: none;
+    border: none;
+    color: rgb(136, 136, 136);
+    font-weight: bold;
+    box-shadow: none;
+}
+.save_btn{
+      text-align: center;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 2px;
+    color: white;
+    opacity: 0.9;
+    font-size: 14px;
+    padding: 8px 12px;
+    min-width: 70px;
+    background-color: rgb(34, 34, 34);
+    border: 2px solid rgb(34, 34, 34);
+    display: inline-block;
 }

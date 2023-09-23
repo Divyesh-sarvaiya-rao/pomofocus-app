@@ -13,7 +13,7 @@ function MainHeader() {
 			</h4>
 			<div className='header-button'>
 				<button>Report</button>
-				<button>Setting</button>
+				<button><img src='../settings.png' alt='setting'/>Setting</button>
 				<button>Login</button>
 			</div>
 		</div>

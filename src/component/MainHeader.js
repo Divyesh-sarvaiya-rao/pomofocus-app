@@ -1,4 +1,6 @@
 import React from 'react'
+import { FaUser } from "react-icons/fa";
+import { FaWhmcs } from "react-icons/fa";
 
 function MainHeader() {
 	return (
@@ -13,8 +15,8 @@ function MainHeader() {
 			</h4>
 			<div className='header-button'>
 				<button>Report</button>
-				<button><img src='../settings.png' alt='setting'/>Setting</button>
-				<button>Login</button>
+				<button><FaWhmcs />Setting</button>
+				<button><FaUser />Login</button>
 			</div>
 		</div>
 		</>
